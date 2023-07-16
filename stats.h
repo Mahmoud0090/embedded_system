@@ -99,7 +99,8 @@ unsigned char find_minimum(unsigned char* arr , unsigned int length);
 /**
  * @brief <sorting an array in descending order>
  *
- * <sorting the array in descending order >
+ * <sorting the array in descending order by using quick_sort function which
+   sort the array in ascending order then reverse it>
 
  * @param <unsigned char* array>
  * @param <unsigned int length>
@@ -108,4 +109,49 @@ unsigned char find_minimum(unsigned char* arr , unsigned int length);
 void sort_array(unsigned char* arr , unsigned int length);
 
 
+/**
+ * @brief <swap two values of an array>
+ *
+ * <swaping two values of unsigned char in an array>
+ * @param <unsigned char* a>
+ * @param <unsigned char* b>
+*/
+
+void swap(unsigned char* a , unsigned char* b);
+
+/**
+ * @brief <sorting an array in ascending order>
+ *
+ * <sorting an array in ascending order using quick sort algorithm>
+ * @param <unsigned char* arr>
+ * @param <unsigned int length>
+*/
+
+void quick_sort(unsigned char* arr , unsigned int length);
+
+/**
+ * @brief <sorting an array in ascending order>
+ *
+ * <sorting an array in ascending order using recursion>
+ * @param <unsigned char* arr>
+ * @param <unsigned int low>
+ * @param <unsigned in high>
+*/
+
+
+void quick_sort_recursion(unsigned char* arr , unsigned int low , unsigned int high);
+
+/**
+ * @brief <return pivot_index that used in quick sort>
+
+ * @param <unsigned char* arr>
+ * @param <unsigned int low>
+ * @param <unsigned int high>
+
+ * @return <unsigned int>
+*/
+
+unsigned int partition(unsigned char* arr , unsigned int low , unsigned int high);
+
 #endif /* __STATS_H__ */
+
