@@ -37,19 +37,23 @@ void main() {
                               201,   6,  12,  60,   8,   2,   5,  67,
                                 7,  87, 250, 230,  99,   3, 100,  90};
 
-  /* Other Variable Declarations Go Here */
-  /* Statistics and Printing Functions Go Here */
-  print_statistics(test , SIZE);
 
- /* print the array before sorting*/
-  printf("\n\n");
+ /* printing the array before sorting*/
+  printf("printing the array below\n");
   print_array(test , SIZE);
 
- /*print the array after descending order sorting*/
+  /* Statistics function */
+  printf("\n\n");
+  print_statistics(test , SIZE);
+
+ /*printing the array after descending order sorting*/
  printf("\n\n");
+ printf("printing the array in descending order sorting\n");
  sort_array(test , SIZE);
  print_array(test , SIZE);
 
+
+ printf("\n\n");
 }
 
 /* Add other Implementation File Code Here */
@@ -70,7 +74,8 @@ void print_array(unsigned char* arr , unsigned int length)
 {
  for(int i = 0; i<length ; i++)
  {
-  printf("%d\n" , arr[i]);
+  printf("%d" , arr[i]);
+  printf(" ");
  }
 }
 
