@@ -16,13 +16,13 @@
  * are not to change any of the code, they are instead supposed to compile
  * these files with their makefile.
  *
- * @author Alex Fosdick
- * @date April 1 2017
+ * @author Mahmoud Abdulaal
+ * @date October 4 2023
  *
  */
 #include "platform.h"
 #include "memory.h"
-#include "Course1.h"
+#include "course1.h"
 
 #define MAX_LENGTH (10)
 char buffer[MAX_LENGTH];
