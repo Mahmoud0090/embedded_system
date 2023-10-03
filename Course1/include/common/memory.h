@@ -15,8 +15,8 @@
  * This header file provides an abstraction of reading and
  * writing to memory via function calls. 
  *
- * @author Alex Fosdick
- * @date April 1 2017
+ * @author Mahmoud Abdulaal
+ * @date October 4 2023
  *
  */
 #ifndef __MEMORY_H__
@@ -89,5 +89,128 @@ void set_all(char * ptr, char value, unsigned int size);
  * @return void.
  */
 void clear_all(char * ptr, unsigned int size);
+
+
+/**
+ * @brief Sets data array elements to a value
+ * 
+ * Given a pointer to a char data set, this will set a number of elements
+ * from a provided data array to the given value. The length is determined
+ * by the provided size parameter.
+ *
+ * @param ptr Pointer to data array
+ * @param value value to write the the locaiton
+ * @param size Number of elements to set to value
+ *
+ * @return void.
+ */
+
+uint8_t * my_memmove(uint8_t * src, uint8_t * dst, size_t length);
+
+
+
+/**
+ * @brief Sets data array elements to a value
+ * 
+ * Given a pointer to a char data set, this will set a number of elements
+ * from a provided data array to the given value. The length is determined
+ * by the provided size parameter.
+ *
+ * @param ptr Pointer to data array
+ * @param value value to write the the locaiton
+ * @param size Number of elements to set to value
+ *
+ * @return void.
+ */
+
+uint8_t * my_memcopy(uint8_t * src, uint8_t * dst, size_t length);
+
+
+/**
+ * @brief Sets data array elements to a value
+ * 
+ * Given a pointer to a char data set, this will set a number of elements
+ * from a provided data array to the given value. The length is determined
+ * by the provided size parameter.
+ *
+ * @param ptr Pointer to data array
+ * @param value value to write the the locaiton
+ * @param size Number of elements to set to value
+ *
+ * @return void.
+ */
+
+uint8_t * my_memset(uint8_t * src, size_t length, uint8_t value);
+
+
+/**
+ * @brief Sets data array elements to a value
+ * 
+ * Given a pointer to a char data set, this will set a number of elements
+ * from a provided data array to the given value. The length is determined
+ * by the provided size parameter.
+ *
+ * @param ptr Pointer to data array
+ * @param value value to write the the locaiton
+ * @param size Number of elements to set to value
+ *
+ * @return void.
+ */
+
+uint8_t * my_memzero(uint8_t * src, size_t length);
+
+
+/**
+ * @brief Sets data array elements to a value
+ * 
+ * Given a pointer to a char data set, this will set a number of elements
+ * from a provided data array to the given value. The length is determined
+ * by the provided size parameter.
+ *
+ * @param ptr Pointer to data array
+ * @param value value to write the the locaiton
+ * @param size Number of elements to set to value
+ *
+ * @return void.
+ */
+
+uint8_t * my_reverse(uint8_t * src, size_t length);
+
+
+
+/**
+ * @brief Sets data array elements to a value
+ * 
+ * Given a pointer to a char data set, this will set a number of elements
+ * from a provided data array to the given value. The length is determined
+ * by the provided size parameter.
+ *
+ * @param ptr Pointer to data array
+ * @param value value to write the the locaiton
+ * @param size Number of elements to set to value
+ *
+ * @return void.
+ */
+
+int32_t * reserve_words(size_t length);
+
+
+
+/**
+ * @brief Sets data array elements to a value
+ * 
+ * Given a pointer to a char data set, this will set a number of elements
+ * from a provided data array to the given value. The length is determined
+ * by the provided size parameter.
+ *
+ * @param ptr Pointer to data array
+ * @param value value to write the the locaiton
+ * @param size Number of elements to set to value
+ *
+ * @return void.
+ */
+
+void free_words(int32_t * src);
+
 
 #endif /* __MEMORY_H__ */

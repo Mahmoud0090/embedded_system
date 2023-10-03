@@ -22,6 +22,7 @@
  */
 #include "platform.h"
 #include "memory.h"
+#include "Course1.h"
 
 #define MAX_LENGTH (10)
 char buffer[MAX_LENGTH];
@@ -30,6 +31,10 @@ char buffer[MAX_LENGTH];
 int main(void) {
   unsigned int i;
   char value;
+
+  #ifdef COURSE1
+	Course1();
+  #endif
 
   /* Code below does some arbitrary memory Reads & writes */
   clear_all(buffer, MAX_LENGTH);
