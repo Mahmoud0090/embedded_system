@@ -33,7 +33,7 @@
 /* Add other Implementation File Code Here */
 void print_statistics(unsigned char* arr, unsigned int length)
 {
-  unsigned char mean = find_mean(arr , length);
+ /* unsigned char mean = find_mean(arr , length);
   unsigned char median = find_median(arr , length);
   unsigned char max = find_maximum(arr , length);
   unsigned char min = find_minimum(arr , length);
@@ -41,7 +41,7 @@ void print_statistics(unsigned char* arr, unsigned int length)
   PRINTF("the mean is %d\n", mean);
   PRINTF("the median is %d\n", median);
   PRINTF("the maximum value is %d\n" , max);
-  PRINTF("the minimum value is %d\n" , min);
+  PRINTF("the minimum value is %d\n" , min);*/
 }
 
 void print_array(unsigned char* arr , unsigned int length)

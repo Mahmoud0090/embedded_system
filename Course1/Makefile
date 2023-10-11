@@ -5,7 +5,7 @@
 # forms is permitted as long as the files maintain this copyright. Users are 
 # permitted to modify this and use it to learn about the field of embedded
 # software. Alex Fosdick and the University of Colorado are not liable for any
-# misuse of this material. 
+# misuse of this material.
 #
 #*****************************************************************************
 
@@ -35,19 +35,19 @@ GENFLAGS = -Wall -Werror\
            -g -O0 -std=c99
 
 TARGET = c1m2
-
+ 
 # platform dependent variables
 ifeq ($(PLATFORM),MSP432)
 
 	CPU = cortex-m4
 	ARCH = armv7e-m
 
-	SOURCES+= ./startup_msp432p401r_gcc.c \
-		  ./system_msp432p401r.c \
-		  ./interrupts_msp432p401r_gcc.c
+	SOURCES+= ./src/startup_msp432p401r_gcc.c \
+		  ./src/system_msp432p401r.c \
+		  ./src/interrupts_msp432p401r_gcc.c
 
-	INCLUDES+= -I ../include/CMSIS/ \
-		   -I ../include/msp432/
+	INCLUDES+= -I ./include/CMSIS/ \
+		   -I ./include/msp432/
 
 	# Compiler
 	CC = arm-none-eabi-gcc
@@ -57,7 +57,7 @@ ifeq ($(PLATFORM),MSP432)
 	SIZE = arm-none-eabi-size
 
 	# Linker Flags
-	LINKER_FILE = ../msp432p401r.lds
+	LINKER_FILE = ./msp432p401r.lds
 	LDFLAGS = -Wl,-Map=$(TARGET).map -T $(LINKER_FILE)
 
 	# Compiler Flags
@@ -123,4 +123,4 @@ compile-all: $(OBJS)
 clean:
 	# This should remove all compiled objects, preprocessed outputs, assembly outputs, executable files and build output files.
 	@echo Removing all built files
-	rm -f *.out *.map *.o *.asm *.i
+	rm -f ./*.out ./*.map ./src/*.o ./src/*.asm ./src/*.i
