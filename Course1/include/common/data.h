@@ -1,29 +1,48 @@
 /**
- * @brief Sets a value of a data array 
+ * @file data.h
+ * @brief Abstraction of some basic data manipulation
  *
- * Given a pointer to a char data set, this will set a provided
- * index into that data set to the value provided.
+ * This header file provides an abstraction of the basic data manipulation,
+ * converting data from int to ASCII, and vice-versa
  *
- * @param ptr Pointer to data array
- * @param index Index into pointer array to set value
- * @param value value to write the the locaiton
+ * @author Mahmoud Abdulaal
+ * @date October 8 2023
  *
- * @return void.
  */
-uint8_t my_itoa(int32_t data, uint8_t * ptr, uint32_t base);
 
+#ifndef __data_H__
+#define __data_H__
+
+#include <math.h>
 
 /**
- * @brief Sets a value of a data array 
+ * @brief Converts given data from integer to ASCII string
  *
- * Given a pointer to a char data set, this will set a provided
- * index into that data set to the value provided.
+ * Given a pointer to a char dataset, this will set a provided
+ * index into that dataset to the value provided.
+ * Regarding the signed numbers, the function handles the base 10 signed numbers only.
  *
+ * @param data The int number to be converted
  * @param ptr Pointer to data array
- * @param index Index into pointer array to set value
- * @param value value to write the the locaiton
+ * @param base Base to convert to
  *
- * @return void.
+ * @return length of the converted data.
  */
+uint8_t my_itoa(int32_t data, uint8_t *ptr, uint32_t base);
 
-int32_t my_atoi(uint8_t * ptr, uint8_t digits, uint32_t base)
+/**
+ * @brief Converts given data from ASCII string to integer
+ *
+ * Given a pointer to a char dataset, this will set a provided
+ * index into that dataset to the value provided.
+ * The function handles the base 10 signed numbers.
+ *
+ * @param ptr Pointer to the string to be converted
+ * @param digits Number of digits in the character set
+ * @param value Base to convert to
+ *
+ * @return the converted integer.
+ */
+int32_t my_atoi(uint8_t *ptr, uint8_t digits, uint32_t base);
+
+#endif

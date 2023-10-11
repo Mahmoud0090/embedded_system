@@ -21,39 +21,14 @@
  */
 
 #include <stdio.h>
-#include "stats.h"
-#include "platform.h"
+#include "../include/common/stats.h"
+#include "../include/common/platform.h"
 #include <stdlib.h>
 
 /* Size of the Data Set */
 #define SIZE (40)
 
-void main() {
 
-  unsigned char test[SIZE] = { 34, 201, 190, 154,   8, 194,   2,   6,
-                              114, 88,   45,  76, 123,  87,  25,  23,
-                              200, 122, 150, 90,   92,  87, 177, 244,
-                              201,   6,  12,  60,   8,   2,   5,  67,
-                                7,  87, 250, 230,  99,   3, 100,  90};
-
-
- /* printing the array before sorting*/
-  printf("printing the array below\n");
-  print_array(test , SIZE);
-
-  /* Statistics function */
-  printf("\n\n");
-  print_statistics(test , SIZE);
-
- /*printing the array after descending order sorting*/
- printf("\n\n");
- printf("printing the array in descending order sorting\n");
- sort_array(test , SIZE);
- print_array(test , SIZE);
-
-
- printf("\n\n");
-}
 
 /* Add other Implementation File Code Here */
 void print_statistics(unsigned char* arr, unsigned int length)
@@ -63,10 +38,10 @@ void print_statistics(unsigned char* arr, unsigned int length)
   unsigned char max = find_maximum(arr , length);
   unsigned char min = find_minimum(arr , length);
 
-  printf("the mean is %d\n", mean);
-  printf("the median is %d\n", median);
-  printf("the maximum value is %d\n" , max);
-  printf("the minimum value is %d\n" , min);
+  PRINTF("the mean is %d\n", mean);
+  PRINTF("the median is %d\n", median);
+  PRINTF("the maximum value is %d\n" , max);
+  PRINTF("the minimum value is %d\n" , min);
 }
 
 void print_array(unsigned char* arr , unsigned int length)

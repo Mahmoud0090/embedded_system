@@ -20,24 +20,24 @@
  * @date October 4 2023
  *
  */
-#include "platform.h"
-#include "memory.h"
-#include "course1.h"
+#include "../include/common/platform.h"
+#include "../include/common/memory.h"
+#include "../include/common/course1.h"
 
 #define MAX_LENGTH (10)
 char buffer[MAX_LENGTH];
 
 /* A pretty boring main file */
 int main(void) {
-  unsigned int i;
-  char value;
+  //unsigned int i;
+  //char value;
 
   #ifdef COURSE1
-	Course1();
+	course1();
   #endif
 
   /* Code below does some arbitrary memory Reads & writes */
-  clear_all(buffer, MAX_LENGTH);
+ /* clear_all(buffer, MAX_LENGTH);
   set_all( ( buffer + 8 ), 43, 2); 
   set_value(buffer, 0, 0x61);
   value = get_value(buffer, 9);
@@ -53,7 +53,7 @@ int main(void) {
   for ( i = 0; i < MAX_LENGTH; i++ ){
     PRINTF("%c", buffer[i]);
   }
-  PRINTF("\n");
+  PRINTF("\n");*/
   return 0;
 }
 
