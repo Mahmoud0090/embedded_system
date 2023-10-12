@@ -28,7 +28,7 @@ PLATFORM =HOST
 
 # other compile switch variables
 VER =
-COUR =
+COUR = COURSE1
 
 # general flags for all
 GENFLAGS = -Wall -Werror\
